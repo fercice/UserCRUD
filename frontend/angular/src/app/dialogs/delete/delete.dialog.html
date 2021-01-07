@@ -1,0 +1,23 @@
+<div class="container">
+  <h3 mat-dialog-title>Deseja realmente excluir o Usuário?</h3>
+  <div mat-dialog-content>
+    <label class="font-bold">Id:</label> {{data.id}}
+    <p></p>
+    <label class="font-bold">Nome:</label> {{data.nome}}
+    <p></p>
+    <label class="font-bold">Sobrenome:</label> {{data.sobrenome}}
+    <p></p>
+    <label class="font-bold">E-mail:</label> {{data.email}}
+    <p></p>
+    <label class="font-bold">Data de nascimento:</label> {{data.dataNascimento}}
+    <p></p>
+    <label class="font-bold">Escolaridade:</label> {{data.escolaridade}}
+    <p></p>
+  </div>
+
+  <div mat-dialog-actions>
+    <!-- [mat-dialog-close]="1"  -->
+    <button mat-button (click)="confirmDelete()">Excluir</button>
+    <button mat-button (click)="onNoClick()" tabindex="-1">Cancelar</button>
+  </div>
+</div>

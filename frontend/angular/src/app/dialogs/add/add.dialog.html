@@ -1,0 +1,53 @@
+<div class="container">
+  <h3 mat-dialog-title>Adicionar novo Usuário</h3>
+
+  <form class="mat-dialog-content" (ngSubmit)="submit" #formControl="ngForm">
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #input class="form-control" placeholder="Nome" [(ngModel)]="data.nome" name="nome" maxlength="50" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #inputstate class="form-control" placeholder="Sobrenome" [(ngModel)]="data.sobrenome" name="sobrenome" maxlength="50" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>        
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="E-mail" [(ngModel)]="data.email" name="email" maxlength="50" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>  
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="Data de nascimento" [(ngModel)]="data.dataNascimento" name="dataNascimento" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>  
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field appearance="fill" color="accent">
+        <mat-label>Escolaridade</mat-label>
+        <mat-select disableRipple [(ngModel)]="data.escolaridade" name="escolaridade" required>
+          <mat-option value=""></mat-option>
+          <mat-option *ngFor="let escolaridade of data.listaEscolaridade; let i = index" [value]="data.listaEscolaridade[i].id">
+            {{data.listaEscolaridade[i].nome}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> 
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <!-- [mat-dialog-close]="1"  -->
+      <button mat-button [type]="submit" [disabled]="!formControl.valid" (click)="confirmAdd()">Adicionar</button>
+      <button mat-button (click)="onNoClick()" tabindex="-1">Cancelar</button>
+    </div>
+  </form>
+</div>

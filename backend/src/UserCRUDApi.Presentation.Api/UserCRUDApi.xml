@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UserCRUDApi.Presentation.Api</name>
+    </assembly>
+    <members>
+        <member name="M:UserCRUDApi.Presentation.Api.Controllers.UsuarioController.Adicionar(UserCRUDApi.Service.ViewModels.UsuarioViewModel)">
+            <remarks>
+            Escolaridade: 1 = Infantil; 2 = Fundamental; 3 = Médio; 4 = Superior
+            </remarks>
+        </member>
+        <member name="M:UserCRUDApi.Presentation.Api.Controllers.UsuarioController.Alterar(UserCRUDApi.Service.ViewModels.UsuarioViewModel)">
+            <remarks>
+            Escolaridade: 1 = Infantil; 2 = Fundamental; 3 = Médio; 4 = Superior
+            </remarks>
+        </member>
+    </members>
+</doc>
