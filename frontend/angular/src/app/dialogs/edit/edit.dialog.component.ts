@@ -40,6 +40,6 @@ export class EditDialogComponent {
   }
 
   stopEdit(): void {
-    this.dataService.alterarUsuario(this.data);
+    this.dataService.alterarUsuario(this.data, this.dialogRef);
   }
 }

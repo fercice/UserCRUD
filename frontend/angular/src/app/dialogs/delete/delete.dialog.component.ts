@@ -18,6 +18,6 @@ export class DeleteDialogComponent {
   }
 
   confirmDelete(): void {
-    this.dataService.excluirUsuario(this.data.id);
+    this.dataService.excluirUsuario(this.data.id, this.dialogRef);
   }
 }

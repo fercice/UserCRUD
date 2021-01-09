@@ -267,7 +267,7 @@ namespace UserCRUDApi.Presentation.Api.Controllers
         }
 
         [HttpGet()]
-        [Route("escolaridades/listar")]
+        [Route("escolaridade/listar")]
         [Authorize()]
         public ActionResult<dynamic> ListarEscolaridades()
         {

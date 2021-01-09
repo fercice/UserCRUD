@@ -11,9 +11,9 @@ import {Usuario} from '../../models/usuario';
 })
 
 export class AddDialogComponent {
-  constructor(public dialogRef: MatDialogRef<AddDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: Usuario,
-              public dataService: DataService) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Usuario,
+              public dialogRef: MatDialogRef<AddDialogComponent>,            
+              public dataService: DataService) {}
 
   formControl = new FormControl('', [
     Validators.required,
@@ -42,6 +42,6 @@ export class AddDialogComponent {
   }
 
   public confirmAdd(): void {
-    this.dataService.adicionarUsuario(this.data);    
+    this.dataService.adicionarUsuario(this.data, this.dialogRef);
   }
 }

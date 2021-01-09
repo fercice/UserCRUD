@@ -16,7 +16,7 @@ namespace UserCRUDApi.Service.ViewModels
         public string Sobrenome { get; set; }
 
         [Required(ErrorMessage = "E-mail é obrigatório")]
-        [EmailAddress(ErrorMessage = "E-mail inválido.")]
+        [EmailAddress(ErrorMessage = "E-mail inválido")]
         [DisplayName("E-mail")]
         public string Email { get; set; }
 

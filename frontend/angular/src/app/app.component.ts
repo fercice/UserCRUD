@@ -27,8 +27,8 @@ export class AppComponent implements OnInit {
   id: number;  
 
   constructor(public httpClient: HttpClient,
-              public dialog: MatDialog,
               public dataService: DataService,
+              public dialog: MatDialog,              
               public toastr: ToastrService) {}
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
